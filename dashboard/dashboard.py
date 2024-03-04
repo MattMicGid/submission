@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-data = pd.read_csv('main_data.csv')
+data = pd.read_csv('dashboard/main_data.csv')
 
 def plot_customer_by_state(data):
     bystate_df = data.groupby(by="customer_state").customer_id.nunique().reset_index()
